@@ -42,25 +42,26 @@ layout: default
     </footer>
 
     <script>
-        // JavaScript code for handling AJAX requests
         document.addEventListener('DOMContentLoaded', function() {
             const postLinks = document.querySelectorAll('.post-link');
-
+    
             postLinks.forEach(function(link) {
                 link.addEventListener('click', function(event) {
                     event.preventDefault();
-
+    
                     const postUrl = this.getAttribute('href');
                     loadPostContent(postUrl);
                 });
             });
-
+    
             function loadPostContent(url) {
                 const xhr = new XMLHttpRequest();
                 xhr.onreadystatechange = function() {
                     if (xhr.readyState === XMLHttpRequest.DONE) {
                         if (xhr.status === 200) {
-                            document.getElementById('post-content').innerHTML = xhr.responseText;
+                            // Wrap the loaded content with the main layout structure
+                            const postContent = '<main>' + xhr.responseText + '</main>';
+                            document.getElementById('post-content').innerHTML = postContent;
                         } else {
                             console.error('Error loading post content:', xhr.status);
                         }
@@ -71,5 +72,6 @@ layout: default
             }
         });
     </script>
+    
 </body>
 </html>
