@@ -90,3 +90,31 @@ footer ul li {
 main {
     padding: 0;
 }
+
+/* Art Gallery Styling */
+.art-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.art-gallery figure {
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.art-gallery img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.art-gallery figcaption {
+    margin-top: 10px;
+    font-style: italic;
+}
+
