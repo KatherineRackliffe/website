@@ -1,3 +1,9 @@
+/* Spacing between header text and box */
+header nav {
+    margin-bottom: 20px;
+}
+
+/* Your existing CSS styles */
 body {
     margin: 60px auto;
     width: 70%;
@@ -117,4 +123,3 @@ main {
     margin-top: 10px;
     font-style: italic;
 }
-
