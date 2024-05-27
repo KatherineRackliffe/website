@@ -1,43 +1,92 @@
 body {
     margin: 60px auto;
     width: 70%;
+    background-color: #f3e5f5; /* Light purple background */
+    color: #4a4a4a; /* Dark grey text color */
 }
+
 nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0;
     list-style: none;
     font-weight: bold;
 }
+
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
+
 a {
     text-decoration: none;
-    color: #999;
+    color: #f7c948; /* Yellow link color */
 }
+
 a:hover {
     text-decoration: underline;
 }
+
 h1 {
     font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    color: #7d4cdb; /* Purple heading color */
 }
+
 p {
     font-size: 1.5em;
     line-height: 1.4em;
-    color: #333;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+    color: #4a4a4a; /* Dark grey text color */
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: 0.8em;
+    color: #4a4a4a; /* Dark grey text color */
+}
+
+ul.posts {
+    margin: 20px auto 40px;
     font-size: 1.5em;
 }
 
 ul.posts li {
     list-style: none;
+}
+
+/* New styles for section blocks */
+header, section, footer {
+    background-color: #fffde7; /* Light yellow background */
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #7d4cdb; /* Purple background for header */
+    color: white;
+    padding: 10px 0;
+}
+
+header nav ul li a {
+    color: white;
+}
+
+footer {
+    background-color: #7d4cdb; /* Purple background for footer */
+    color: white;
+    padding: 10px 0;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 10px;
+}
+
+main {
+    padding: 0;
 }
