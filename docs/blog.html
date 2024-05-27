@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,10 +26,14 @@
     <main>
         <section>
             <h1>Blog</h1>
-            <article>
-                <h2>Blog Post Title</h2>
-                <p>in progress</p>
-            </article>
+            <ul>
+                {% for post in site.posts %}
+                <li>
+                    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                    <p>{{ post.excerpt }}</p>
+                </li>
+                {% endfor %}
+            </ul>
         </section>
     </main>
     <footer>
