@@ -1,7 +1,24 @@
 ---
-layout: home
-title: Index
-permalink: /home/
+layout: default
+title: Home
 ---
 
-<h1>Home</h1>
+<h1>Welcome to My Website</h1>
+<p>This is the home page of my Jekyll site. Here you'll find information about my projects, blog posts, and more.</p>
+
+<section id="recent-posts">
+  <h2>Recent Blog Posts</h2>
+  <ul>
+    {% for post in site.posts limit:5 %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <p>{{ post.excerpt }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="projects-overview">
+  <h2>Projects</h2>
+  <p>Check out my <a href="{{ '/projects/' | relative_url }}">projects</a> page to see what I've been working on.</p>
+</section>
