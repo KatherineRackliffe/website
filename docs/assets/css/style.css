@@ -1,14 +1,18 @@
 @import "base";
+
 /* Body and Background */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Cool font */
     color: #fff; /* Text color */
     background-color: #2b1b36; /* Dark purple background */
+    margin: 0;
+    padding: 0;
 }
 
 /* Header and Navigation */
 header {
     background-color: #452a5a; /* Darker purple for header background */
+    padding: 20px;
 }
 
 nav ul {
@@ -19,23 +23,58 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 nav ul li a {
     color: #fff; /* Text color for navigation links */
     text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #d5c2e3; /* Lighter purple on hover */
 }
 
 /* Links */
 a {
     color: #a69ccc; /* Lighter purple for links */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition */
 }
 
 a:hover {
-    color: #d5c2e3; /* Lighter purple on hover */
+    color: #fff; /* White on hover */
+}
+
+/* Project Gallery */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-item {
+    width: 30%; /* Adjust as needed */
+    margin: 20px;
+    padding: 20px;
+    background-color: #452a5a; /* Darker purple */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.project-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-item h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.project-item p {
+    font-size: 16px;
+    margin-top: 10px;
 }

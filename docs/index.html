@@ -3,17 +3,14 @@ layout: default
 title: Home
 ---
 
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-<head>
-    <meta charset="utf-8">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/main.scss" | relative_url }}">
-</head>
-<body>
-    <main>
-        <h1>Welcome to My Jekyll Site</h1>
-        <p>This is the home page of my Jekyll site.</p>
-    </main>
-</body>
-</html>
+<main>
+    <h1>Welcome to My Jekyll Site</h1>
+    <p>This is the home page of my Jekyll site.</p>
+    
+    <h2>Top Blog Posts</h2>
+    <ul>
+        {% for post in site.posts limit:3 %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date_to_string }}</li>
+        {% endfor %}
+    </ul>
+</main>

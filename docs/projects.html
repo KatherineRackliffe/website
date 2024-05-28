@@ -3,17 +3,55 @@ layout: default
 title: Projects
 ---
 
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-<head>
-    <meta charset="utf-8">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-</head>
-<body>
-    <main>
-        <h1>My Projects</h1>
-        <p>Here are some of the projects I've been working on.</p>
-    </main>
-</body>
-</html>
+<main>
+    <h1>My Projects</h1>
+    <p>Here are some of the projects I've been working on.</p>
+    
+    <div class="project-gallery">
+        <div class="project-item">
+            <img src="/path/to/project1-image.jpg" alt="Project 1">
+            <h3>Project 1</h3>
+            <p>Description of Project 1</p>
+        </div>
+        <div class="project-item">
+            <img src="/path/to/project2-image.jpg" alt="Project 2">
+            <h3>Project 2</h3>
+            <p>Description of Project 2</p>
+        </div>
+        <!-- Add more project items as needed -->
+    </div>
+    
+    <div class="gallery-controls">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+    </div>
+</main>
+
+<script>
+    // JavaScript for image slider
+    let slideIndex = 0;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        let i;
+        const slides = document.getElementsByClassName("project-item");
+        if (n >= slides.length) {slideIndex = 0}
+        if (n < 0) {slideIndex = slides.length - 1}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex].style.display = "block";
+    }
+
+    document.getElementById("prevBtn").addEventListener("click", function() {
+        plusSlides(-1);
+    });
+
+    document.getElementById("nextBtn").addEventListener("click", function() {
+        plusSlides(1);
+    });
+</script>
