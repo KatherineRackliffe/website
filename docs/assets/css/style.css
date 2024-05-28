@@ -4,7 +4,7 @@
 
 /* Body and Background */
 html, body {
-    height: 100%; /* Ensure the body and html take up full height */
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -15,7 +15,7 @@ body {
     background-image: url('/assets/images/space.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Fix the background image */
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
 }
@@ -24,13 +24,13 @@ body {
 main {
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Adjusted to column */
+    align-items: center; /* Center align content */
 }
 
 /* Shared Styles for Containers */
 .container, .project-wrapper {
-    max-width: 1200px;
+    max-width: 90%; /* Adjusted max-width */
     margin: 20px auto;
     padding: 20px;
     border: 5px solid #a169b4;
@@ -43,8 +43,6 @@ main {
 header {
     background-color: #6e3a9d;
     padding: 20px;
-    position: fixed;
-    top: 0;
     width: 100%;
     z-index: 1000;
     text-align: center;
@@ -54,15 +52,14 @@ header {
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     background-color: #6e3a9d;
     padding: 20px;
     text-align: center;
     font-family: 'Orbitron', sans-serif;
     color: #fff;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%; /* Ensure footer stretches */
+    flex-shrink: 0; /* Ensure footer doesn't shrink */
 }
 
 /* Copyright text */
@@ -70,104 +67,10 @@ footer {
     font-size: 14px;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-family: 'Orbitron', sans-serif;
-}
-
-nav ul li a:hover {
-    color: #b594c8;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Links */
-a {
-    color: #a169b4;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #fff;
-}
-
-/* Project Gallery */
-.project-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.project-item {
-    flex: 1 1 calc(33.333% - 40px); /* Adjusted for responsive layout */
-    margin: 20px;
-    padding: 20px;
-    background-color: #6e3a9d;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.project-item h3 {
-    margin-top: 10px;
-    font-size: 20px;
-    text-align: center;
-}
-
-.project-item p {
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-/* Project Images on Project Page */
-.project-details img {
-    max-width: 25%;
-    height: auto;
-    border-radius: 5px;
-    display: block;
-    margin: 20px auto 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-details img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
 /* Center align headers */
 h1, h2, h3 {
     text-align: center;
     font-family: 'Orbitron', sans-serif;
-}
-
-/* Boxes around headers and other content */
-.boxed {
-    border: 2px solid #a169b4;
-    border-radius: 10px;
-    padding: 10px 20px;
-    margin-bottom: 20px;
 }
 
 /* Customized buttons */
