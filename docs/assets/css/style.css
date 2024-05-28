@@ -7,6 +7,7 @@ body {
     background-image: url('/assets/images/space.jpg'); /* Galaxy image background */
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; /* Fix the background image */
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Hide horizontal scrollbar */
@@ -16,7 +17,7 @@ body {
 /* Purple Box Surrounding All Content */
 .container {
     max-width: 1200px; /* Fixed size */
-    margin: 20px auto; /* Center horizontally */
+    margin: 100px auto 20px; /* More space between header and content */
     padding: 20px;
     border: 5px solid #a169b4; /* Border color */
     border-radius: 15px; /* Rounded corners */
@@ -29,11 +30,17 @@ header {
     background-color: #6e3a9d; /* Dark purple for header background */
     padding: 20px;
     position: fixed; /* Fixed position to stay at the top */
+    top: 0;
     width: 100%;
     z-index: 1000; /* Ensure it's above other content */
     text-align: center; /* Center align header content */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    font-family: 'Orbitron', sans-serif; /* Cool and futuristic font */
+    font-size: 24px; /* Larger font size for header text */
 }
+
+/* Add the Google Font for Orbitron */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 nav ul {
     list-style-type: none;
@@ -52,6 +59,7 @@ nav ul li a {
     transition: color 0.3s ease; /* Smooth transition */
     padding: 10px 15px;
     border-radius: 5px; /* Rounded corners */
+    font-family: 'Orbitron', sans-serif; /* Cool and futuristic font for nav links */
 }
 
 nav ul li a:hover {
@@ -87,11 +95,6 @@ a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
-.project-item:hover {
-    transform: translateY(-5px); /* Move up on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
-}
-
 .project-item img {
     max-width: 100%; /* Constrain image width */
     height: auto; /* Maintain aspect ratio */
@@ -109,9 +112,33 @@ a:hover {
     margin-top: 10px;
 }
 
+/* Gallery Controls */
+.gallery-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.gallery-controls button {
+    background-color: #b594c8; /* Light purple background */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 20px; /* Larger border radius */
+    padding: 10px 20px; /* Padding */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    margin: 0 10px; /* Space between buttons */
+}
+
+.gallery-controls button:hover {
+    background-color: #8f68a3; /* Darker purple on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
 /* Center align headers */
 h1, h2, h3 {
     text-align: center;
+    font-family: 'Orbitron', sans-serif; /* Cool and futuristic font for headers */
 }
 
 /* Boxes around headers and other content */
