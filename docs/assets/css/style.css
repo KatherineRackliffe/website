@@ -76,6 +76,41 @@ h1, h2, h3 {
     font-family: 'Orbitron', sans-serif;
 }
 
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff; /* Text color for navigation links */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition */
+    padding: 10px 15px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+nav ul li a:hover {
+    color: #b594c8; /* Lighter purple on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+}
+
+/* Links */
+a {
+    color: #a169b4; /* Purple for links */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+a:hover {
+    color: #fff; /* White on hover */
+}
+
 /* Customized buttons */
 .btn {
     background-color: #b594c8;
