@@ -19,6 +19,7 @@ header {
     position: fixed; /* Fixed position to stay at the top */
     width: 100%;
     z-index: 1000; /* Ensure it's above other content */
+    text-align: center; /* Center align header content */
 }
 
 nav ul {
@@ -83,9 +84,38 @@ a:hover {
 .project-item h3 {
     margin-top: 10px;
     font-size: 20px;
+    text-align: center; /* Center align project titles */
 }
 
 .project-item p {
     font-size: 16px;
     margin-top: 10px;
+}
+
+/* Center align headers */
+h1, h2, h3 {
+    text-align: center;
+}
+
+/* Boxes around headers and other content */
+.boxed {
+    border: 2px solid #a169b4; /* Border color */
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+/* Customized buttons */
+.btn {
+    background-color: #a169b4; /* Purple background */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.btn:hover {
+    background-color: #6e3a9d; /* Darker purple on hover */
 }
