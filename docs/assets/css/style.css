@@ -129,6 +129,26 @@ a:hover {
 }
 
 /* Project Images on Project Page */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-item {
+    width: 30%; /* Adjust as needed */
+    margin: 20px;
+    padding: 20px;
+    background-color: #6e3a9d; /* Dark purple */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.project-item:hover {
+    transform: translateY(-5px); /* Move up on hover */
+}
+
 .project-details img {
     max-width: 300px; /* Adjust as needed */
     height: auto; /* Maintain aspect ratio */
@@ -143,6 +163,23 @@ a:hover {
 .project-details img:hover {
     transform: scale(1.05); /* Slight zoom on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.project-item img {
+    max-width: 100%; /* Constrain image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+.project-item h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center; /* Center align project titles */
+}
+
+.project-item p {
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 /* Media Queries for Responsiveness */
