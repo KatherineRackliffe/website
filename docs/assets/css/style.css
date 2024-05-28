@@ -1,5 +1,4 @@
 @import "base";
-/* Add the Google Font for Orbitron */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 /* Body and Background */
@@ -30,7 +29,7 @@ body {
 /* Header and Navigation */
 header {
     background-color: #6e3a9d; /* Dark purple for header background */
-    padding: 100px;
+    padding: 50px;
     position: fixed; /* Fixed position to stay at the top */
     top: 0;
     width: 100%;
@@ -41,8 +40,23 @@ header {
     font-size: 24px; /* Larger font size for header text */
 }
 
-/* Add the Google Font for Orbitron */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+/* Footer */
+footer {
+    background-color: #6e3a9d; /* Dark purple for footer background */
+    padding: 20px;
+    text-align: center; /* Center align footer content */
+    font-family: 'Orbitron', sans-serif; /* Cool and futuristic font for footer */
+    color: #fff; /* Text color */
+    position: fixed; /* Fixed position to stay at the bottom */
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+/* Copyright text */
+.copyright {
+    font-size: 14px;
+}
 
 nav ul {
     list-style-type: none;

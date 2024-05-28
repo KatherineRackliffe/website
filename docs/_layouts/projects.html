@@ -8,23 +8,32 @@
 </head>
 <body>
     <header>
-        <!-- Header content goes here -->
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/about.html">About</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <!-- Page content goes here -->
         <h1>{{ page.title }}</h1>
         <div class="project-details">
-            <h2>{{ page.project.title }}</h2>
-            <img src="{{ page.project.image }}" alt="{{ page.project.title }}">
-            <p>{{ page.project.description }}</p>
+            <h2>{{ page.title }}</h2>
+            <img src="{{ page.image }}" alt="{{ page.title }}">
+            <p>{{ page.description }}</p>
             <!-- Additional project details can go here -->
         </div>
     </main>
 
     <footer>
-        <!-- Footer content goes here -->
+        <p class="copyright">&copy; 2024 Katherine Rackliffe. All Rights Reserved.</p>
     </footer>
+    
 
     <!-- JavaScript scripts or links go here -->
 </body>
