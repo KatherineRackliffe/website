@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 /* Body and Background */
+html, body {
+    height: 100%; /* Ensure the body and html take up full height */
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Roboto', sans-serif; /* Cool font */
     color: #fff; /* Text color */
@@ -9,24 +15,22 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Fix the background image */
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    position: relative; /* Position relative for content stacking */
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
 /* Main content wrapper */
 main {
     flex: 1; /* This makes the main content take up the remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Purple Box Surrounding All Content */
 .container {
     max-width: 1200px; /* Fixed size */
-    margin: 150px auto 20px; /* More space between header and content */
+    margin: 20px auto; /* Adjusted margin */
     padding: 20px;
     border: 5px solid #a169b4; /* Border color */
     border-radius: 15px; /* Rounded corners */
@@ -55,7 +59,6 @@ footer {
     text-align: center; /* Center align footer content */
     font-family: 'Orbitron', sans-serif; /* Cool and futuristic font for footer */
     color: #fff; /* Text color */
-    position: relative; /* Change from absolute to relative */
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
 }
 
@@ -136,7 +139,7 @@ a:hover {
 
 /* Project Images on Project Page */
 .project-details img {
-    max-width: 80%; /* Adjust as needed */
+    max-width: 50%; /* Adjusted to 50% to make the image smaller */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px;
     display: block; /* Ensure image takes full width */
