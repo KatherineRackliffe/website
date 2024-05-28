@@ -1,51 +1,26 @@
----
-layout: default
----
-<main>
-    <h1>My Projects</h1>
-    <p>Here are some of the projects I've been working on.</p>
-    
-    <div class="project-gallery">
-        {% for project in site.projects %}
-        <div class="project-item">
-            <img src="{{ project.image }}" alt="{{ project.title }}">
-            <h3>{{ project.title }}</h3>
-            <p>{{ project.description }}</p>
-        </div>
-        {% endfor %}
-    </div>
-    
-    <div class="gallery-controls">
-        <button id="prevBtn">Previous</button>
-        <button id="nextBtn">Next</button>
-    </div>
-</main>
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+    <header>
+        <!-- Header content goes here -->
+    </header>
 
-<script>
-    // JavaScript for image slider
-    let slideIndex = 0;
-    showSlides(slideIndex);
+    <main>
+        <!-- Page content goes here -->
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+    </main>
 
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
 
-    function showSlides(n) {
-        let i;
-        const slides = document.getElementsByClassName("project-item");
-        if (n >= slides.length) {slideIndex = 0}
-        if (n < 0) {slideIndex = slides.length - 1}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slides[slideIndex].style.display = "block";
-    }
-
-    document.getElementById("prevBtn").addEventListener("click", function() {
-        plusSlides(-1);
-    });
-
-    document.getElementById("nextBtn").addEventListener("click", function() {
-        plusSlides(1);
-    });
-</script>
+    <!-- JavaScript scripts or links go here -->
+</body>
+</html>
