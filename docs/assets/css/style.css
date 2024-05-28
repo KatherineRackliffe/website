@@ -10,6 +10,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Hide horizontal scrollbar */
+    position: relative; /* Position relative for content stacking */
 }
 
 /* Header and Navigation */
@@ -76,8 +77,8 @@ a:hover {
 }
 
 .project-item img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* Constrain image width */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 5px;
 }
 
@@ -107,15 +108,15 @@ h1, h2, h3 {
 
 /* Customized buttons */
 .btn {
-    background-color: #a169b4; /* Purple background */
+    background-color: #b594c8; /* Light purple background */
     color: #fff; /* Text color */
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
+    border-radius: 10px; /* Larger border radius */
+    padding: 15px 30px; /* Larger padding */
     cursor: pointer;
     transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 .btn:hover {
-    background-color: #6e3a9d; /* Darker purple on hover */
+    background-color: #8f68a3; /* Darker purple on hover */
 }
