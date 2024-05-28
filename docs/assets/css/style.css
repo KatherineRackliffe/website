@@ -13,6 +13,17 @@ body {
     position: relative; /* Position relative for content stacking */
 }
 
+/* Purple Box Surrounding All Content */
+.container {
+    max-width: 1200px; /* Fixed size */
+    margin: 20px auto; /* Center horizontally */
+    padding: 20px;
+    border: 5px solid #a169b4; /* Border color */
+    border-radius: 15px; /* Rounded corners */
+    background-color: rgba(110, 58, 157, 0.8); /* Semi-transparent background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
 /* Header and Navigation */
 header {
     background-color: #6e3a9d; /* Dark purple for header background */
@@ -21,6 +32,7 @@ header {
     width: 100%;
     z-index: 1000; /* Ensure it's above other content */
     text-align: center; /* Center align header content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
 }
 
 nav ul {
@@ -38,10 +50,13 @@ nav ul li a {
     color: #fff; /* Text color for navigation links */
     text-decoration: none;
     transition: color 0.3s ease; /* Smooth transition */
+    padding: 10px 15px;
+    border-radius: 5px; /* Rounded corners */
 }
 
 nav ul li a:hover {
     color: #b594c8; /* Lighter purple on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
 }
 
 /* Links */
@@ -69,11 +84,12 @@ a:hover {
     background-color: #6e3a9d; /* Dark purple */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    transition: transform 0.3s ease; /* Smooth transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
 .project-item:hover {
     transform: translateY(-5px); /* Move up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
 .project-item img {
@@ -111,12 +127,14 @@ h1, h2, h3 {
     background-color: #b594c8; /* Light purple background */
     color: #fff; /* Text color */
     border: none;
-    border-radius: 10px; /* Larger border radius */
+    border-radius: 20px; /* Larger border radius */
     padding: 15px 30px; /* Larger padding */
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    font-size: 16px; /* Slightly larger font size */
 }
 
 .btn:hover {
     background-color: #8f68a3; /* Darker purple on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
 }
