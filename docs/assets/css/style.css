@@ -54,6 +54,7 @@ header {
 
 /* Footer */
 footer {
+    position:fixed;
     background-color: #6e3a9d; /* Dark purple for footer background */
     padding: 20px;
     text-align: center; /* Center align footer content */
@@ -104,6 +105,16 @@ a:hover {
 }
 
 /* Project Gallery */
+.project-wrapper {
+    max-width: 1200px; /* Fixed size */
+    margin: 20px auto; /* Adjusted margin */
+    padding: 20px;
+    border: 5px solid #a169b4; /* Border color */
+    border-radius: 15px; /* Rounded corners */
+    background-color: rgba(110, 58, 157, 0.8); /* Semi-transparent background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
 .project-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -139,7 +150,7 @@ a:hover {
 
 /* Project Images on Project Page */
 .project-details img {
-    max-width: 50%; /* Adjusted to 50% to make the image smaller */
+    max-width: 25%; /* Adjusted to 50% to make the image smaller */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px;
     display: block; /* Ensure image takes full width */
