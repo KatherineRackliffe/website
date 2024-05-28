@@ -13,6 +13,14 @@ body {
     padding: 0;
     overflow-x: hidden; /* Hide horizontal scrollbar */
     position: relative; /* Position relative for content stacking */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main content wrapper */
+main {
+    flex: 1; /* This makes the main content take up the remaining space */
 }
 
 /* Purple Box Surrounding All Content */
@@ -47,9 +55,7 @@ footer {
     text-align: center; /* Center align footer content */
     font-family: 'Orbitron', sans-serif; /* Cool and futuristic font for footer */
     color: #fff; /* Text color */
-    position: absolute; /* Absolute position */
-    bottom: 0;
-    width: 100%;
+    position: relative; /* Change from absolute to relative */
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
 }
 
