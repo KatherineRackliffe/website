@@ -31,7 +31,7 @@ main {
 
 /* Shared Styles for Containers */
 .container, .project-wrapper {
-    max-width: 90%; /* Adjusted max-width */
+    max-width: 800px; /* Set a fixed width */
     margin: 20px auto;
     padding: 20px;
     border: 5px solid #a169b4;
@@ -130,7 +130,7 @@ a:hover {
 
 /* Project Images on Project Page */
 .project-details img {
-    max-width: 50%; /* Adjust as needed */
+    max-width: 300px; /* Adjust as needed */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px;
     display: block; /* Ensure image takes full width */
@@ -144,7 +144,6 @@ a:hover {
     transform: scale(1.05); /* Slight zoom on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
 }
-
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
