@@ -1,1 +1,41 @@
 @import "base";
+/* Body and Background */
+body {
+    font-family: Arial, sans-serif;
+    color: #fff; /* Text color */
+    background-color: #2b1b36; /* Dark purple background */
+}
+
+/* Header and Navigation */
+header {
+    background-color: #452a5a; /* Darker purple for header background */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff; /* Text color for navigation links */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Links */
+a {
+    color: #a69ccc; /* Lighter purple for links */
+}
+
+a:hover {
+    color: #d5c2e3; /* Lighter purple on hover */
+}
