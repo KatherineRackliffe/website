@@ -29,7 +29,7 @@ body {
 /* Header and Navigation */
 header {
     background-color: #6e3a9d; /* Dark purple for header background */
-    padding: 50px;
+    padding: 20px; /* Reduced padding */
     position: fixed; /* Fixed position to stay at the top */
     top: 0;
     width: 100%;
@@ -37,7 +37,7 @@ header {
     text-align: center; /* Center align header content */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
     font-family: 'Orbitron', sans-serif; /* Cool and futuristic font */
-    font-size: 24px; /* Larger font size for header text */
+    font-size: 18px; /* Smaller font size for header text */
 }
 
 /* Footer */
@@ -47,7 +47,7 @@ footer {
     text-align: center; /* Center align footer content */
     font-family: 'Orbitron', sans-serif; /* Cool and futuristic font for footer */
     color: #fff; /* Text color */
-    position: fixed; /* Fixed position to stay at the bottom */
+    position: absolute; /* Absolute position */
     bottom: 0;
     width: 100%;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
@@ -128,28 +128,22 @@ a:hover {
     margin-top: 10px;
 }
 
-/* Gallery Controls */
-.gallery-controls {
-    text-align: center;
-    margin-top: 20px;
+/* Project Images on Project Page */
+.project-details img {
+    max-width: 80%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+    display: block; /* Ensure image takes full width */
+    margin: 0 auto; /* Center align image */
+    margin-top: 20px; /* Add some space */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
-.gallery-controls button {
-    background-color: #b594c8; /* Light purple background */
-    color: #fff; /* Text color */
-    border: none;
-    border-radius: 20px; /* Larger border radius */
-    padding: 10px 20px; /* Padding */
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
-    margin: 0 10px; /* Space between buttons */
-}
-
-.gallery-controls button:hover {
-    background-color: #8f68a3; /* Darker purple on hover */
+.project-details img:hover {
     transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
 }
-
 
 /* Center align headers */
 h1, h2, h3 {
