@@ -1,3 +1,4 @@
+/* Body and Background */
 @import "base";
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
@@ -41,14 +42,16 @@ main {
 
 /* Header and Navigation */
 header {
-    background-color: #6e3a9d;
-    padding: 20px;
+    background-color: #6e3a9d; /* Dark purple for header background */
+    padding: 20px; /* Reduced padding */
+    position: fixed; /* Fixed position to stay at the top */
+    top: 0;
     width: 100%;
-    z-index: 1000;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    font-family: 'Orbitron', sans-serif;
-    font-size: 18px;
+    z-index: 1000; /* Ensure it's above other content */
+    text-align: center; /* Center align header content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    font-family: 'Orbitron', sans-serif; /* Cool and futuristic font */
+    font-size: 18px; /* Smaller font size for header text */
 }
 
 footer {
@@ -88,6 +91,13 @@ h1, h2, h3 {
 .btn:hover {
     background-color: #8f68a3;
     transform: scale(1.05);
+}
+
+/* Project Images */
+.project-item img, .project-details img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
 }
 
 /* Media Queries for Responsiveness */
