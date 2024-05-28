@@ -4,15 +4,21 @@
 body {
     font-family: 'Roboto', sans-serif; /* Cool font */
     color: #fff; /* Text color */
-    background-color: #2b1b36; /* Dark purple background */
+    background-image: url('/assets/images/space.jpg'); /* Galaxy image background */
+    background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 /* Header and Navigation */
 header {
-    background-color: #452a5a; /* Darker purple for header background */
+    background-color: #6e3a9d; /* Dark purple for header background */
     padding: 20px;
+    position: fixed; /* Fixed position to stay at the top */
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other content */
 }
 
 nav ul {
@@ -33,12 +39,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #d5c2e3; /* Lighter purple on hover */
+    color: #b594c8; /* Lighter purple on hover */
 }
 
 /* Links */
 a {
-    color: #a69ccc; /* Lighter purple for links */
+    color: #a169b4; /* Purple for links */
     text-decoration: none;
     transition: color 0.3s ease; /* Smooth transition */
 }
@@ -58,9 +64,14 @@ a:hover {
     width: 30%; /* Adjust as needed */
     margin: 20px;
     padding: 20px;
-    background-color: #452a5a; /* Darker purple */
+    background-color: #6e3a9d; /* Dark purple */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.project-item:hover {
+    transform: translateY(-5px); /* Move up on hover */
 }
 
 .project-item img {
