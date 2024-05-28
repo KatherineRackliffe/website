@@ -1,4 +1,6 @@
 @import "base";
+/* Add the Google Font for Orbitron */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 /* Body and Background */
 body {
@@ -28,7 +30,7 @@ body {
 /* Header and Navigation */
 header {
     background-color: #6e3a9d; /* Dark purple for header background */
-    padding: 20px;
+    padding: 100px;
     position: fixed; /* Fixed position to stay at the top */
     top: 0;
     width: 100%;
