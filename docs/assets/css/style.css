@@ -165,11 +165,23 @@ a:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
 }
 
+/* Project Images on Project Page */
 .project-item img {
-    max-width: 100%; /* Constrain image width */
+    max-width: 300px; /* Adjust as needed */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px;
+    display: block; /* Ensure image takes full width */
+    margin: 0 auto; /* Center align image */
+    margin-top: 20px; /* Add some space */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
+
+.project-item img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
 
 .project-item h3 {
     margin-top: 10px;
