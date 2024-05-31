@@ -1,29 +1,43 @@
+/* Body and Background */
 @import "base";
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* Body and Background */
-body {
-    font-family: 'Roboto', sans-serif; /* Cool font */
-    color: #fff; /* Text color */
-    background-image: url('/assets/images/space.jpg'); /* Galaxy image background */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Fix the background image */
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    position: relative; /* Position relative for content stacking */
 }
 
-/* Purple Box Surrounding All Content */
-.container {
-    max-width: 1200px; /* Fixed size */
-    margin: 150px auto 20px; /* More space between header and content */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-image: url('/assets/images/space.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content wrapper */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Adjusted to column */
+    align-items: center; /* Center align content */
+}
+
+/* Shared Styles for Containers */
+.container, .project-wrapper {
+    max-width: 800px; /* Set a fixed width */
+    margin: 20px auto;
     padding: 20px;
-    border: 5px solid #a169b4; /* Border color */
-    border-radius: 15px; /* Rounded corners */
-    background-color: rgba(110, 58, 157, 0.8); /* Semi-transparent background */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    border: 5px solid #a169b4;
+    border-radius: 15px;
+    background-color: rgba(110, 58, 157, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Header and Navigation */
@@ -40,22 +54,26 @@ header {
     font-size: 18px; /* Smaller font size for header text */
 }
 
-/* Footer */
 footer {
-    background-color: #6e3a9d; /* Dark purple for footer background */
+    background-color: #6e3a9d;
     padding: 20px;
-    text-align: center; /* Center align footer content */
-    font-family: 'Orbitron', sans-serif; /* Cool and futuristic font for footer */
-    color: #fff; /* Text color */
-    position: absolute; /* Absolute position */
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%; /* Ensure footer stretches */
+    flex-shrink: 0; /* Ensure footer doesn't shrink */
 }
 
 /* Copyright text */
 .copyright {
     font-size: 14px;
+}
+
+/* Center align headers */
+h1, h2, h3 {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
 }
 
 nav ul {
@@ -75,7 +93,6 @@ nav ul li a {
     transition: color 0.3s ease; /* Smooth transition */
     padding: 10px 15px;
     border-radius: 5px; /* Rounded corners */
-    font-family: 'Orbitron', sans-serif; /* Cool and futuristic font for nav links */
 }
 
 nav ul li a:hover {
@@ -94,7 +111,24 @@ a:hover {
     color: #fff; /* White on hover */
 }
 
-/* Project Gallery */
+/* Customized buttons */
+.btn {
+    background-color: #b594c8;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #8f68a3;
+    transform: scale(1.05);
+}
+
+/* Project Images on Project Page */
 .project-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -108,14 +142,13 @@ a:hover {
     background-color: #6e3a9d; /* Dark purple */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    transition: transform 0.3s ease; /* Smooth transition */
 }
 
 .project-item img {
-    width: 100%; /* Ensure the image covers the full width of the project item */
+    max-width: 100%; /* Constrain image width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px;
-    object-fit: cover; /* Ensure the image covers the available space */
 }
 
 .project-item h3 {
@@ -131,7 +164,7 @@ a:hover {
 
 /* Project Images on Project Page */
 .project-details img {
-    max-width: 80%; /* Adjust as needed */
+    max-width: 300px; /* Adjust as needed */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px;
     display: block; /* Ensure image takes full width */
@@ -146,33 +179,49 @@ a:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
 }
 
-/* Center align headers */
-h1, h2, h3 {
-    text-align: center;
-    font-family: 'Orbitron', sans-serif; /* Cool and futuristic font for headers */
+/* Project Images on Project Page */
+.project-item img {
+    max-width: 300px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+    display: block; /* Ensure image takes full width */
+    margin: 0 auto; /* Center align image */
+    margin-top: 20px; /* Add some space */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
-/* Boxes around headers and other content */
-.boxed {
-    border: 2px solid #a169b4; /* Border color */
-    border-radius: 10px;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-}
-
-/* Customized buttons */
-.btn {
-    background-color: #b594c8; /* Light purple background */
-    color: #fff; /* Text color */
-    border: none;
-    border-radius: 20px; /* Larger border radius */
-    padding: 15px 30px; /* Larger padding */
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
-    font-size: 16px; /* Slightly larger font size */
-}
-
-.btn:hover {
-    background-color: #8f68a3; /* Darker purple on hover */
+.project-item img:hover {
     transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+
+.project-item h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center; /* Center align project titles */
+}
+
+.project-item p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header, footer {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .project-item {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .project-item {
+        flex: 1 1 calc(100% - 40px);
+    }
 }
