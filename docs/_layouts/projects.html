@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="icon" href="{{ 'assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
+    <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
@@ -21,12 +21,12 @@
     </header>
 
     <main>
-        <!-- Page content goes here -->
         <h1>{{ page.title }}</h1>
         <div class="project-wrapper"> <!-- New class for wrapping project details -->
             <div class="project-details">
-                <h2>{{ page.title }}</h2>
-                <img src="{{ page.image }}" alt="{{ page.title }}">
+                {% if page.image %}
+                    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+                {% endif %}
                 <p>{{ page.description }}</p>
                 <!-- Additional project details can go here -->
             </div>
