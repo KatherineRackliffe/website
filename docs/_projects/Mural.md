@@ -1,7 +1,7 @@
 ---
 layout: projects
 title: "Mural"
-image: "./assets/images/Mural.jpg"  # Path to the image file
+image: "./assets/images/mural.jpg"  # Path to the image file
 description: "This is a mural I painted! I did this as part of an art project with the city of South Jordan."
 ---
 
