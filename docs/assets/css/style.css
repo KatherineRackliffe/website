@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Body and Background */
 html, body {
     height: 100%;
     margin: 0;
@@ -21,17 +20,15 @@ body {
     flex-direction: column;
 }
 
-/* Main content wrapper */
 main {
     flex: 1;
     display: flex;
-    flex-direction: column; /* Adjusted to column */
-    align-items: center; /* Center align content */
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Shared Styles for Containers */
 .container, .project-wrapper {
-    max-width: 800px; /* Set a fixed width */
+    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     border: 5px solid #a169b4;
@@ -40,18 +37,17 @@ main {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Header and Navigation */
 header {
-    background-color: #6e3a9d; /* Dark purple for header background */
-    padding: 20px; /* Reduced padding */
-    position: fixed; /* Fixed position to stay at the top */
+    background-color: #6e3a9d;
+    padding: 20px;
+    position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Ensure it's above other content */
-    text-align: center; /* Center align header content */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
-    font-family: 'Orbitron', sans-serif; /* Cool and futuristic font */
-    font-size: 18px; /* Smaller font size for header text */
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
 }
 
 footer {
@@ -61,19 +57,8 @@ footer {
     font-family: 'Orbitron', sans-serif;
     color: #fff;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
-    width: 100%; /* Ensure footer stretches */
-    flex-shrink: 0; /* Ensure footer doesn't shrink */
-}
-
-/* Copyright text */
-.copyright {
-    font-size: 14px;
-}
-
-/* Center align headers */
-h1, h2, h3 {
-    text-align: center;
-    font-family: 'Orbitron', sans-serif;
+    width: 100%;
+    flex-shrink: 0;
 }
 
 nav ul {
@@ -88,30 +73,28 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff; /* Text color for navigation links */
+    color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease; /* Smooth transition */
+    transition: color 0.3s ease;
     padding: 10px 15px;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px;
 }
 
 nav ul li a:hover {
-    color: #b594c8; /* Lighter purple on hover */
-    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+    color: #b594c8;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Links */
 a {
-    color: #a169b4; /* Purple for links */
+    color: #a169b4;
     text-decoration: none;
-    transition: color 0.3s ease; /* Smooth transition */
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #fff; /* White on hover */
+    color: #fff;
 }
 
-/* Customized buttons */
 .btn {
     background-color: #b594c8;
     color: #fff;
@@ -128,7 +111,6 @@ a:hover {
     transform: scale(1.05);
 }
 
-/* Project Images on Project Page */
 .project-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -136,25 +118,25 @@ a:hover {
 }
 
 .project-item {
-    width: 30%; /* Adjust as needed */
+    width: 30%;
     margin: 20px;
     padding: 20px;
-    background-color: #6e3a9d; /* Dark purple */
+    background-color: #6e3a9d;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    transition: transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .project-item img {
-    max-width: 100%; /* Constrain image width */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
     border-radius: 5px;
 }
 
 .project-item h3 {
     margin-top: 10px;
     font-size: 20px;
-    text-align: center; /* Center align project titles */
+    text-align: center;
 }
 
 .project-item p {
@@ -162,53 +144,26 @@ a:hover {
     margin-top: 10px;
 }
 
-/* Project Images on Project Page */
 .project-details img {
-    max-width: 300px; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
     border-radius: 5px;
-    display: block; /* Ensure image takes full width */
-    margin: 0 auto; /* Center align image */
-    margin-top: 20px; /* Add some space */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-details img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Project Images on Project Page */
-.project-item img {
-    max-width: 300px; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px;
-    display: block; /* Ensure image takes full width */
-    margin: 0 auto; /* Center align image */
-    margin-top: 20px; /* Add some space */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+h1, h2, h3 {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
 }
 
-.project-item img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
-}
-
-
-.project-item h3 {
-    margin-top: 10px;
-    font-size: 20px;
-    text-align: center; /* Center align project titles */
-}
-
-.project-item p {
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header, footer {
         padding: 10px;

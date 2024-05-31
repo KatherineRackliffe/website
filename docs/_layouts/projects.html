@@ -22,13 +22,12 @@
 
     <main>
         <h1>{{ page.title }}</h1>
-        <div class="project-wrapper"> <!-- New class for wrapping project details -->
+        <div class="project-wrapper">
             <div class="project-details">
                 {% if page.image %}
                     <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
                 {% endif %}
                 <p>{{ page.description }}</p>
-                <!-- Additional project details can go here -->
             </div>
         </div>
     </main>
