@@ -147,7 +147,7 @@ a:hover {
 
 .project-details img {
     width: auto; /* Allow the width to adjust based on the image aspect ratio */
-    max-height: 150px; /* Set a smaller maximum height for the project images */
+    max-height: 300px; /* Set a smaller maximum height for the project images */
     border-radius: 5px;
     display: block;
     margin: 20px auto;
