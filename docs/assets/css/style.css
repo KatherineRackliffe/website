@@ -112,9 +112,10 @@ a:hover {
 }
 
 .project-item img {
-    max-width: 100%; /* Constrain image width */
+    width: 100%; /* Ensure the image covers the full width of the project item */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px;
+    object-fit: cover; /* Ensure the image covers the available space */
 }
 
 .project-item h3 {
