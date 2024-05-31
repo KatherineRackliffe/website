@@ -128,8 +128,8 @@ a:hover {
 }
 
 .project-item img {
-    max-width: 100%;
-    height: auto;
+    width: 100%; /* Ensure the width fills the container */
+    max-height: 200px; /* Set a maximum height for the images */
     border-radius: 5px;
 }
 

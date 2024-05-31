@@ -25,8 +25,7 @@
         <div class="project-wrapper">
             <div class="project-details">
                 {% if page.image %}
-                    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" style="border: 2px solid red;">
-                    <p>Image path: {{ page.image | relative_url }}</p> <!-- Debug output -->
+                    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
                 {% else %}
                     <p>No image found for this project.</p>
                 {% endif %}
