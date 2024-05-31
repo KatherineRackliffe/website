@@ -26,6 +26,9 @@
             <div class="project-details">
                 {% if page.image %}
                     <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+                    <p>Image path: {{ page.image | relative_url }}</p> <!-- Debug output -->
+                {% else %}
+                    <p>No image found for this project.</p>
                 {% endif %}
                 <p>{{ page.description }}</p>
             </div>
