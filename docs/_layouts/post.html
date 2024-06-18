@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="icon" href="{{ 'assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="{{ '/' | relative_url }}">Home</a></li>
-                <li><a href="{{ '/projects.html' | relative_url }}">Projects</a></li>
-                <li><a href="{{ '/blog.html' | relative_url }}">Blog</a></li>
-                <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
-                <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <div class="header-name">Katherine Rackliffe</div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/projects.html">Projects</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <div class="container">
