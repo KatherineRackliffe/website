@@ -12,10 +12,8 @@
         <div class="header-content">
             <div class="header-name">Katherine Rackliffe</div>
             <nav>
-                {% if page.layout == "project" %}
-                    <button id="toggle-blinkies" class="btn">Toggle Blinkies</button>
-                {% endif %}
                 <ul>
+                    <li><button id="toggle-blinkies" class="btn">Toggle Blinkies</button></li>
                     <li><a href="/">Home</a></li>
                     <li><a href="/projects.html">Projects</a></li>
                     <li><a href="/contact.html">Contact</a></li>
@@ -24,6 +22,7 @@
             </nav>
         </div>
     </header>
+    
     <main>
         {% if page.layout == "project" %}
             <h1>{{ page.title }}</h1>

@@ -1,0 +1,58 @@
+# Ignore Docker files
+Dockerfile
+docker-compose.yml
+
+# Ignore environment variable files
+.env
+.env.local
+.env.*.local
+
+# Ignore compiled binaries and build artifacts
+**/bin/
+**/build/
+**/out/
+**/dist/
+**/target/
+**/node_modules/
+
+# Ignore Docker image files and other images
+*.tar
+*.tgz
+*.zip
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Ignore IDE/editor configurations
+.idea/
+*.sublime-workspace
+*.sublime-project
+.vscode/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore coverage and test result files
+coverage/
+test-results/
+
+# Ignore cache files
+.cache/
+tmp/
+cache/
+
+# Ignore Docker volumes
+volumes/
+
+# Ignore any other directories or files specific to your setup
+# You can add additional ignores specific to your project here.

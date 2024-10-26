@@ -62,13 +62,27 @@ header {
     align-items: center;
 }
 
+header nav ul {
+    display: flex; 
+    align-items: center; 
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+header nav ul li {
+    margin-right: 20px; /* Space between items */
+}
+
+
 footer {
-    background-color: var(--primary-color);
-    padding: 10px;
+    background-color: var(--primary-color); /* Ensures solid purple box */
+    padding: 20px; /* Increased padding for uniformity */
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     font-family: 'Orbitron', sans-serif;
     font-size: 18px;
+    position: relative; /* Add this if footer overlaps content */
 }
 
 .header-content {
@@ -129,19 +143,21 @@ a:hover, a:focus {
 }
 
 .btn {
-    background-color: var(--accent-color);
+    background-color: var(--accent-color); 
     color: var(--text-color);
     border: none;
     border-radius: 20px;
-    padding: 15px 30px;
+    padding: 10px 20px; 
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    font-size: 16px;
+    font-size: 16px; 
+    display: inline-block; 
 }
 
+
 .btn:hover, .btn:focus {
-    background-color: #8f68a3;
-    transform: scale(1.05);
+    background-color: #8f68a3; 
+    transform: scale(1.05); 
 }
 
 .project-gallery {
@@ -191,6 +207,14 @@ a:hover, a:focus {
 .project-details img:hover, .project-details img:focus {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.blinkie {
+    width: 50px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height */
+    background-color: var(--accent-color); /* Example background color */
+    border-radius: 50%; /* Make them circular if desired */
+    margin: 10px; /* Space between blinkies */
 }
 
 h1, h2, h3 {
