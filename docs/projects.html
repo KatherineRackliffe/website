@@ -8,7 +8,7 @@ title: Projects
     <p>Here are some of the projects I've been working on.</p>
     
     <div class="project-gallery">
-        {% assign sorted_projects = site.projects | sort: 'date' %}
+        {% assign sorted_projects = site.projects | sort: 'date' %}  <!-- Sort projects by date -->
         {% for project in sorted_projects %}
         <div class="project-item">
             <a href="{{ project.url | relative_url }}">
@@ -17,6 +17,7 @@ title: Projects
             </a>
             <p>{{ project.short_description }}</p>
         </div>
+
         {% if forloop.index % 3 == 0 and forloop.index != forloop.length %}
             </div><div class="project-gallery"> <!-- Close and open new row -->
         {% endif %}

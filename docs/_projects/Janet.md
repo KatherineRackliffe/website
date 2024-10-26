@@ -6,6 +6,8 @@ description: "A CTF challenge"
 date: 2023-06-30
 ---
 
+({{ page.image }})
+
 This is a CTF challenge I made for the BYU Cyber youth camps. Can you find the flag? It starts with byuctf{.
 
 I made this site with Google sites. It's pretty easy to make a website with this.

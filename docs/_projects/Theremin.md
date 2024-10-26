@@ -6,6 +6,8 @@ description: "A theremin made with a raspberry pi"
 date: 2021-12-06
 ---
 
+({{ page.image }})
+
 This is a project I built for IT&C 101. I think Theremins are super neat.
 
 Here's a video I made about it.

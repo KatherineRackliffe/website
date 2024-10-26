@@ -5,6 +5,7 @@ image: "./assets/images/SAINTCON.jpg"  # Path to the image file
 description: "I presented at SAINTCON about my research! "
 date: 2024-10-24
 ---
+![SAINTCON Presentation]({{ page.image }})
 
 This was super fun. Lots of people seemed to like it. My Dad told me to put a reference to Sneakers in my presentation, which seemed to be everyone's favorite part. I'll see about posted the video sometime on here.
 
