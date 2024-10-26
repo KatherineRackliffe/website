@@ -13,10 +13,8 @@ title: Home
         <ul>
             {% assign shuffled_projects = site.projects | sample: 3 %} <!-- Randomly select 3 projects -->
             {% for project in shuffled_projects %}
-                <li>
                     <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
                     <p>{{ project.description }}</p>
-                </li>
             {% endfor %}
         </ul>
     </section>

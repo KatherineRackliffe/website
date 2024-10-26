@@ -17,8 +17,8 @@ title: Projects
             </a>
             <p>{{ project.short_description }}</p>
         </div>
-        {% if forloop.index % 3 == 0 %}
-        </div><div class="project-gallery"> <!-- Close and open new row -->
+        {% if forloop.index % 3 == 0 and forloop.index != forloop.length %}
+            </div><div class="project-gallery"> <!-- Close and open new row -->
         {% endif %}
         {% endfor %}
     </div>
