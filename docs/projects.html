@@ -17,10 +17,6 @@ title: Projects
             </a>
             <p>{{ project.short_description }}</p>
         </div>
-
-        {% if forloop.index % 3 == 0 and forloop.index != forloop.length %}
-            </div><div class="project-gallery"> <!-- Close and open new row for a grid layout -->
-        {% endif %}
         {% endfor %}
     </div>
 </main>

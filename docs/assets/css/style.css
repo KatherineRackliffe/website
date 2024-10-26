@@ -205,20 +205,35 @@ a:hover, a:focus {
     gap: 20px; /* Space between items */
 }
 
-/* Style for inline text links */
 .inline-link {
-    color: #4b0082; /* Adjust color to fit your site’s style */
-    text-decoration: underline; /* Optional, add underline to indicate link */
-    font-weight: normal; /* Keeps font weight consistent with surrounding text */
-    border: none; /* Removes any borders */
-    padding: 0; /* Ensures no padding */
+    color: var(--accent-color); /* Use your site's accent color */
+    text-decoration: underline; /* Underline to indicate it's a link */
+    font-weight: normal; /* Normal weight to match surrounding text */
+    padding: 0; /* No padding */
+    border: none; /* No border */
+    background: none; /* No background */
 }
 
-.inline-link:hover {
-    color: #6a0dad; /* Slightly darker on hover */
-    text-decoration: none; /* Optional, remove underline on hover */
+.inline-link:hover,
+.inline-link:focus {
+    color: #6a0dad; /* Darker shade on hover */
+    text-decoration: none; /* Optionally remove underline on hover */
 }
 
+.about-image {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px 0; /* Add vertical spacing */
+    display: block; /* Center alignment */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-date {
+    font-size: 0.9em; /* Smaller font size */
+    color: #666; /* Gray color for the date */
+    margin: 5px 0; /* Margin for spacing */
+}
 
 .project-item {
     text-align: center;

@@ -5,8 +5,9 @@ image: "./assets/images/Screenshot 2024-10-26 032905.png"  # Path to the image f
 description: "A CTF challenge"
 date: 2023-06-30
 ---
+## Janet's recipes
 
-({{ page.image }})
+<img src="{{ page.image | relative_url }}" alt="Screenshot of a website" class="styled-image">
 
 This is a CTF challenge I made for the BYU Cyber youth camps. Can you find the flag? It starts with byuctf{.
 

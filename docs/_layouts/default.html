@@ -43,10 +43,10 @@
                     <img src="{{ project.image }}" alt="{{ project.title }}">
                     <h3>{{ project.title }}</h3>
                 </a>
+                <p class="project-date">{{ project.date | date: "%B %d, %Y" }}</p> <!-- Displaying the date -->
                 <p>{{ project.short_description }}</p>
             </div>
             {% endfor %}
-        </div>
         </div>
         {% else %}
         <div class="container">
