@@ -1,6 +1,10 @@
 # Ignore the .gitignore file itself
 .gitignore
 
+.vscode
+.dockerignore
+
+
 # Ignore Docker configuration files
 Dockerfile
 docker-compose.yml

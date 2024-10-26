@@ -1,9 +1,7 @@
-FROM jekyll/jekyll:latest
+FROM nginx:latest
 
-WORKDIR /srv/jekyll
-COPY . .
-RUN bundle install
-EXPOSE 4000
+# Copy your custom nginx configuration file
+COPY nginx.conf /etc/nginx/nginx.conf
 
-CMD ["jekyll", "serve", "--watch", "--force_polling"]
-
+# Copy your website files from the docs directory into the Nginx html directory
+COPY docs /usr/share/nginx/html

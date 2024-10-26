@@ -210,8 +210,8 @@ a:hover, a:focus {
 }
 
 .blinkie {
-    width: 150px;
-    height: 20px; 
+    width: 300px;
+    height: 40px; 
     background-color: var(--accent-color); 
     margin: 10px; 
 }
