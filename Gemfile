@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'jekyll', '~> 4.0'
-# Add any other gems you are using in your Jekyll site here
+gem "jekyll"
+gem "webrick"
