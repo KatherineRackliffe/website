@@ -289,7 +289,7 @@ a:hover, a:focus {
 }
 
 .styled-image {
-    max-width: 80%;   /* Control the max width as a percentage */
+    max-width: 50%;   /* Control the max width as a percentage */
     height: auto;     /* Maintain aspect ratio */
     display: block;   /* Center images horizontally */
     margin: 20px auto; /* Add space above and below */
