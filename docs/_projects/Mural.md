@@ -3,6 +3,7 @@ layout: default
 title: "Mural"
 image: "./assets/images/mural.jpg"  # Path to the image file
 description: "This is a mural I painted! I did this as part of an art project with the city of South Jordan."
+date: 2021-06-20
 ---
 
 ## Mural
