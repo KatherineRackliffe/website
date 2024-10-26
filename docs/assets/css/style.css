@@ -210,11 +210,10 @@ a:hover, a:focus {
 }
 
 .blinkie {
-    width: 50px; /* Set a fixed width */
-    height: 50px; /* Set a fixed height */
-    background-color: var(--accent-color); /* Example background color */
-    border-radius: 50%; /* Make them circular if desired */
-    margin: 10px; /* Space between blinkies */
+    width: 150px;
+    height: 20px; 
+    background-color: var(--accent-color); 
+    margin: 10px; 
 }
 
 h1, h2, h3 {

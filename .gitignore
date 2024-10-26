@@ -1,4 +1,7 @@
-# Ignore Docker files
+# Ignore the .gitignore file itself
+.gitignore
+
+# Ignore Docker configuration files
 Dockerfile
 docker-compose.yml
 
