@@ -1,25 +1,32 @@
-/* Importing Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
-/* Global Styles */
+:root {
+    --primary-color: #3e205b;
+    --accent-color: #b594c8;
+    --background-color: #2a1b47;
+    --text-color: #fff;
+}
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-body {
     font-family: 'Roboto', sans-serif;
-    color: #fff;
-    background-color: #2a1b47; /* Darker purple background */
+    color: var(--text-color);
+    background-color: var(--background-color);
     background-image: url('/assets/images/space.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
-    transition: background-color 0.5s ease; /* Page transition */
+    transition: background-color 0.5s ease;
+}
+
+/* if people want to hide the blinkies */
+.hide-blinkies .blinkie {
+    display: none;
 }
 
 main {
@@ -27,22 +34,22 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px; /* Ensure space between header and content */
+    padding-top: 100px;
 }
 
 .container, .project-wrapper {
-    max-width: 1000px; /* Increase max-width to take up more of the screen */
+    max-width: 1000px;
     margin: 20px auto;
-    padding: 40px; /* Increase padding for better spacing */
-    border: 5px solid #3e205b; /* Darker purple for the border */
+    padding: 40px;
+    border: 5px solid var(--primary-color);
     border-radius: 15px;
-    background-color: #3e205b; /* Solid dark purple background */
+    background-color: var(--primary-color);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease; /* Smooth background change */
+    transition: background-color 0.3s ease;
 }
 
 header {
-    background-color: #3e205b; /* Darker purple for better contrast */
+    background-color: var(--primary-color);
     padding: 20px;
     position: fixed;
     top: 0;
@@ -51,8 +58,17 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     font-family: 'Orbitron', sans-serif;
     font-size: 18px;
-    display: flex; /* Flexbox for alignment */
+    display: flex;
     align-items: center;
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
 }
 
 .header-content {
@@ -65,7 +81,7 @@ header {
 .header-name {
     margin-left: 20px;
     font-size: 24px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* See-through text effect */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 nav {
@@ -84,36 +100,37 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s ease;
     padding: 10px 15px;
     border-radius: 5px;
 }
 
-nav ul li a:hover {
-    color: #b594c8;
+nav ul li a:hover,
+nav ul li a:focus {
+    color: var(--accent-color);
     background-color: rgba(255, 255, 255, 0.1);
 }
 
 a {
-    color: #b594c8; /* Lighter purple for links */
+    color: var(--accent-color);
     text-decoration: none;
-    padding: 10px 20px; /* Button-like padding */
-    border: 2px solid #b594c8; /* Button border */
-    border-radius: 20px; /* Rounded corners */
-    display: inline-block; /* Button-like display */
+    padding: 10px 20px;
+    border: 2px solid var(--accent-color);
+    border-radius: 20px;
+    display: inline-block;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-a:hover {
-    background-color: #b594c8; /* Lighter purple background on hover */
-    color: #3e205b; /* Darker purple text on hover */
+a:hover, a:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 .btn {
-    background-color: #b594c8;
-    color: #fff;
+    background-color: var(--accent-color);
+    color: var(--text-color);
     border: none;
     border-radius: 20px;
     padding: 15px 30px;
@@ -122,7 +139,7 @@ a:hover {
     font-size: 16px;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
     background-color: #8f68a3;
     transform: scale(1.05);
 }
@@ -138,7 +155,7 @@ a:hover {
     max-width: 300px;
     margin: 20px;
     padding: 20px;
-    background-color: #3e205b; /* Darker purple for project items */
+    background-color: var(--primary-color);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -171,7 +188,7 @@ a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-details img:hover {
+.project-details img:hover, .project-details img:focus {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
@@ -181,7 +198,13 @@ h1, h2, h3 {
     font-family: 'Orbitron', sans-serif;
 }
 
-/* Responsive Design */
+@media (max-width: 1024px) {
+    .container, .project-wrapper {
+        padding: 20px;
+        margin: 10px;
+    }
+}
+
 @media (max-width: 768px) {
     header, footer {
         padding: 10px;
@@ -189,12 +212,25 @@ h1, h2, h3 {
     }
 
     .project-item {
-        flex: 1 1 calc(50% - 40px);
+        width: calc(50% - 40px);
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
     }
 }
 
 @media (max-width: 480px) {
     .project-item {
-        flex: 1 1 calc(100% - 40px);
+        width: calc(100% - 40px);
     }
+}
+
+a:focus, button:focus, .btn:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
 }

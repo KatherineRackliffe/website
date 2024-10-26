@@ -1,5 +1,5 @@
 ---
-layout: projects
+layout: default
 title: "SAINTCON"
 image: "./assets/images/SAINTCON.jpg"  # Path to the image file
 description: "I presented at SAINTCON about my research! "

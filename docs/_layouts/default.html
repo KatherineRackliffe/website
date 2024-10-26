@@ -12,10 +12,12 @@
         <div class="header-content">
             <div class="header-name">Katherine Rackliffe</div>
             <nav>
+                {% if page.layout == "project" %}
+                    <button id="toggle-blinkies" class="btn">Toggle Blinkies</button>
+                {% endif %}
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/projects.html">Projects</a></li>
-                    <li><a href="/blog.html">Blog</a></li>
                     <li><a href="/contact.html">Contact</a></li>
                     <li><a href="/about.html">About</a></li>
                 </ul>
@@ -23,13 +25,31 @@
         </div>
     </header>
     <main>
-        <div class="container">
-            {{ content }}
-        </div>
+        {% if page.layout == "project" %}
+            <h1>{{ page.title }}</h1>
+            <div class="project-wrapper">
+                <div class="project-details">
+                    {% if page.image %}
+                        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+                    {% else %}
+                        <p>No image found for this project.</p>
+                    {% endif %}
+                    <p>{{ page.description }}</p>
+                    {{ content }}
+                </div>
+            </div>
+        {% else %}
+            <div class="container">
+                {{ content }}
+            </div>
+        {% endif %}
     </main>
     <footer>
-        <p class="copyright">&copy; 2024 Katherine Rackliffe. All Rights Reserved.</p>
         <img src="../assets/images/blinkie.gif" alt="blinkie" class="blinkie">
+        <img src="../assets/images/hack.gif" alt="hack" class="blinkie">
+        <img src='https://blinkies.cafe/b/display/blinkiesCafe-badge.gif' alt='blinkies.cafe | make your own blinkies!'>
+        <p class="copyright">&copy; 2024 Katherine Rackliffe. All Rights Reserved.</p>
     </footer>
+    <script src="../assets/js/java.js"></script>
 </body>
 </html>
