@@ -35,16 +35,18 @@
     <main>
         {% if page.layout == "project" %}
         <h1>{{ page.title }}</h1>
-        <div class="project-wrapper">
-            <div class="project-details">
-                {% if page.image %}
-                <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
-                {% else %}
-                <p>No image found for this project.</p>
-                {% endif %}
-                <p>{{ page.description }}</p>
-                {{ content }}
+        <div class="project-gallery">
+            {% assign sorted_projects = site.projects | sort: 'date' %}
+            {% for project in sorted_projects %}
+            <div class="project-item">
+                <a href="{{ project.url | relative_url }}">
+                    <img src="{{ project.image }}" alt="{{ project.title }}">
+                    <h3>{{ project.title }}</h3>
+                </a>
+                <p>{{ project.short_description }}</p>
             </div>
+            {% endfor %}
+        </div>
         </div>
         {% else %}
         <div class="container">
@@ -53,9 +55,9 @@
         {% endif %}
     </main>
     <footer>
-        <img src="../assets/images/blinkie.gif" alt="blinkie" class="blinkie">
-        <img src="../assets/images/hack.gif" alt="hack" class="blinkie">
-        <img src='https://blinkies.cafe/b/display/blinkiesCafe-badge.gif' alt='blinkies.cafe | make your own blinkies!' class="blinkie">
+        <img src="../assets/images/blinkie.gif" alt="wonderland" class="blinkie">
+        <img src="../assets/images/hack.gif" alt="hack the planet" class="blinkie">
+        <img src="../assets/images/computer.gif" alt="be kind to your computer" class="blinkie">
         <p class="copyright">&copy; 2024 Katherine Rackliffe. All Rights Reserved.</p>
     </footer>
     <script src="../assets/js/java.js"></script>

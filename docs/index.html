@@ -9,13 +9,24 @@ title: Home
         Take a look around and see if there's anything you like!</p>
     
     <section>
-        <h2>Random Projects</h2>
-        <ul>
-            {% assign shuffled_projects = site.projects | sample: 3 %} <!-- Randomly select 3 projects -->
+        <h2>Explore a Random Project</h2>
+        <button id="randomProjectButton">Take me to a random project!</button>
+
+        <!-- Hidden list of project URLs -->
+        <ul id="projectUrls" style="display: none;">
+            {% assign shuffled_projects = site.projects | sample: site.projects.size %} <!-- Shuffle all projects -->
             {% for project in shuffled_projects %}
-                    <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
-                    <p>{{ project.description }}</p>
+                <li data-url="{{ project.url | relative_url }}"></li>
             {% endfor %}
         </ul>
     </section>
 </main>
+
+<script>
+    document.getElementById("randomProjectButton").addEventListener("click", function() {
+        const projectUrls = document.querySelectorAll("#projectUrls li");
+        const randomIndex = Math.floor(Math.random() * projectUrls.length);
+        const randomProjectUrl = projectUrls[randomIndex].getAttribute("data-url");
+        window.location.href = randomProjectUrl; // Redirect to the random project URL
+    });
+</script>

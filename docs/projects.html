@@ -8,7 +8,7 @@ title: Projects
     <p>Here are some of the projects I've been working on.</p>
     
     <div class="project-gallery">
-        {% assign sorted_projects = site.projects | sort: 'date' %}  <!-- Sort projects by date -->
+        {% assign sorted_projects = site.projects | sort: 'date' | reverse %}  <!-- Sort projects by date (newest first) -->
         {% for project in sorted_projects %}
         <div class="project-item">
             <a href="{{ project.url | relative_url }}">
@@ -19,7 +19,7 @@ title: Projects
         </div>
 
         {% if forloop.index % 3 == 0 and forloop.index != forloop.length %}
-            </div><div class="project-gallery"> <!-- Close and open new row -->
+            </div><div class="project-gallery"> <!-- Close and open new row for a grid layout -->
         {% endif %}
         {% endfor %}
     </div>
