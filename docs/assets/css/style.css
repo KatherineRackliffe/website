@@ -24,7 +24,7 @@ html, body {
     transition: background-color 0.5s ease;
 }
 
-/* if people want to hide the blinkies */
+/* Hide blinkies */
 .hide-blinkies .blinkie {
     display: none;
 }
@@ -62,6 +62,10 @@ header {
     align-items: center;
 }
 
+header nav {
+    margin-left: auto; /* Aligns navigation to the right */
+}
+
 header nav ul {
     display: flex; 
     align-items: center; 
@@ -74,15 +78,13 @@ header nav ul li {
     margin-right: 20px; /* Space between items */
 }
 
-
 footer {
-    background-color: var(--primary-color); /* Ensures solid purple box */
+    background-color: var(--primary-color);
     padding: 20px; /* Increased padding for uniformity */
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     font-family: 'Orbitron', sans-serif;
     font-size: 18px;
-    position: relative; /* Add this if footer overlaps content */
 }
 
 .header-content {
@@ -98,19 +100,40 @@ footer {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-nav {
-    margin-right: 20px;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.contact-container {
     display: flex;
+    justify-content: space-between; /* Aligns titles and links */
 }
 
-nav ul li {
-    margin-right: 20px;
+.contact-titles {
+    flex: 1;
+}
+
+.contact-links {
+    flex: 1;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+    .nav-menu {
+        display: none; /* Hide menu on mobile */
+        flex-direction: column; /* Stack items vertically */
+    }
+    .nav-menu.active {
+        display: flex; /* Show menu when active */
+    }
 }
 
 nav ul li a {
@@ -153,7 +176,6 @@ a:hover, a:focus {
     font-size: 16px; 
     display: inline-block; 
 }
-
 
 .btn:hover, .btn:focus {
     background-color: #8f68a3; 

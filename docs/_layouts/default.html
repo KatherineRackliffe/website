@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -7,13 +8,21 @@
     <link rel="icon" href="{{ 'assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
+
 <body>
     <header>
         <div class="header-content">
             <div class="header-name">Katherine Rackliffe</div>
             <nav>
-                <ul>
+                <div class="hamburger" id="hamburger">&#9776;</div> <!-- Hamburger icon -->
+                <ul class="nav-menu" id="nav-menu">
                     <li><button id="toggle-blinkies" class="btn">Toggle Blinkies</button></li>
+                    <li><button id="surprise-button">Surprise!</button></li>
+                    <script>
+                        document.getElementById('surprise-button').addEventListener('click', function () {
+                            confetti();
+                        });
+                    </script>
                     <li><a href="/">Home</a></li>
                     <li><a href="/projects.html">Projects</a></li>
                     <li><a href="/contact.html">Contact</a></li>
@@ -22,25 +31,28 @@
             </nav>
         </div>
     </header>
-    
+
     <main>
+        {% if page.image %}
+        <img src="{{ page.image }}" alt="{{ page.title }}">
+        {% endif %}
         {% if page.layout == "project" %}
-            <h1>{{ page.title }}</h1>
-            <div class="project-wrapper">
-                <div class="project-details">
-                    {% if page.image %}
-                        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
-                    {% else %}
-                        <p>No image found for this project.</p>
-                    {% endif %}
-                    <p>{{ page.description }}</p>
-                    {{ content }}
-                </div>
-            </div>
-        {% else %}
-            <div class="container">
+        <h1>{{ page.title }}</h1>
+        <div class="project-wrapper">
+            <div class="project-details">
+                {% if page.image %}
+                <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+                {% else %}
+                <p>No image found for this project.</p>
+                {% endif %}
+                <p>{{ page.description }}</p>
                 {{ content }}
             </div>
+        </div>
+        {% else %}
+        <div class="container">
+            {{ content }}
+        </div>
         {% endif %}
     </main>
     <footer>
@@ -50,5 +62,14 @@
         <p class="copyright">&copy; 2024 Katherine Rackliffe. All Rights Reserved.</p>
     </footer>
     <script src="../assets/js/java.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <script>
+        // Toggle hamburger menu
+        document.getElementById('hamburger').addEventListener('click', function () {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>
