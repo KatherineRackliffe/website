@@ -50,7 +50,7 @@ main {
 
 header {
     background-color: var(--primary-color);
-    padding: 20px;
+    padding: 10px; /* Reduce padding for a smaller header */
     position: fixed;
     top: 0;
     width: 100%;
@@ -59,7 +59,7 @@ header {
     font-family: 'Orbitron', sans-serif;
     font-size: 18px;
     display: flex;
-    align-items: center;
+    align-items: center; /* Center align items vertically */
 }
 
 header nav {
@@ -117,9 +117,11 @@ footer {
     display: none; /* Hidden by default */
     cursor: pointer;
     font-size: 30px; /* Increase size for better visibility */
+    margin-left: auto; /* Align hamburger to the right */
     margin-right: 20px; /* Space from the right */
 }
 
+/* Adjust the nav-menu styles */
 .nav-menu {
     display: flex;
     list-style: none;
@@ -128,10 +130,10 @@ footer {
 @media (max-width: 768px) {
     .hamburger {
         display: block; /* Show hamburger on mobile */
-        position: absolute; /* Allow positioning */
-        top: 20px; /* Adjust based on header height */
+        position: absolute; /* Positioning */
+        top: 10px; /* Adjust to be closer to the top */
         right: 20px; /* Ensure it's visible on the right */
-        z-index: 1001; /* Make sure it's above other elements */
+        z-index: 1001; /* Above other elements */
     }
     .nav-menu {
         display: none; /* Hide menu on mobile */
@@ -143,6 +145,9 @@ footer {
         background-color: var(--primary-color); /* Match with header */
         padding: 10px 0; /* Add padding for better touch targets */
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Shadow for visibility */
+    }
+    .nav-menu.open {
+        display: flex; /* Show menu when open */
     }
 }
 

@@ -4,11 +4,12 @@ title: Projects
 ---
 
 <main>
-    <h1>———————————My Projects———————————</h1>
+    <h1>My Projects</h1>
     <p>Here are some of the projects I've been working on.</p>
     
     <div class="project-gallery">
-        {% for project in site.projects %}
+        {% assign sorted_projects = site.projects | sort: 'date' %}
+        {% for project in sorted_projects %}
         <div class="project-item">
             <a href="{{ project.url | relative_url }}">
                 <img src="{{ project.image }}" alt="{{ project.title }}">
@@ -16,6 +17,9 @@ title: Projects
             </a>
             <p>{{ project.short_description }}</p>
         </div>
+        {% if forloop.index % 3 == 0 %}
+        </div><div class="project-gallery"> <!-- Close and open new row -->
+        {% endif %}
         {% endfor %}
     </div>
 </main>

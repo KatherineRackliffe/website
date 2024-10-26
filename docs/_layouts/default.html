@@ -17,7 +17,7 @@
                 <div class="hamburger" id="hamburger">&#9776;</div> <!-- Hamburger icon -->
                 <ul class="nav-menu" id="nav-menu">
                     <li><button id="toggle-blinkies" class="btn">Toggle Blinkies</button></li>
-                    <li><button id="surprise-button">Surprise!</button></li>
+                    <li><button id="surprise-button" class="btn">Surprise!</button></li>
                     <script>
                         document.getElementById('surprise-button').addEventListener('click', function () {
                             confetti();
@@ -36,7 +36,6 @@
         {% if page.image %}
         <img src="{{ page.image }}" alt="{{ page.title }}">
         {% endif %}
-
         {% if page.layout == "project" %}
         <h1>{{ page.title }}</h1>
         <div class="project-wrapper">
@@ -46,10 +45,6 @@
                 {% else %}
                 <p>No image found for this project.</p>
                 {% endif %}
-                
-                <!-- Display the project date -->
-                <p class="project-date">{{ page.date | date: "%B %d, %Y" }}</p>
-
                 <p>{{ page.description }}</p>
                 {{ content }}
             </div>
@@ -60,16 +55,20 @@
         </div>
         {% endif %}
     </main>
-    
     <footer>
         <img src="../assets/images/blinkie.gif" alt="blinkie" class="blinkie">
         <img src="../assets/images/hack.gif" alt="hack" class="blinkie">
         <img src='https://blinkies.cafe/b/display/blinkiesCafe-badge.gif' alt='blinkies.cafe | make your own blinkies!' class="blinkie">
         <p class="copyright">&copy; 2024 Katherine Rackliffe. All Rights Reserved.</p>
     </footer>
-    
     <script src="../assets/js/java.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('open'); // Toggle the 'open' class
+        });
+    </script>
 </body>
 
 </html>
