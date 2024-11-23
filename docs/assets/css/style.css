@@ -1,11 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
 :root {
     --primary-color: #3e205b;
     --accent-color: #b594c8;
     --background-color: #2a1b47;
     --text-color: #fff;
-    --header-color: #d4b4e8; /* Softer color for headers */
-    --body-text-size: 18px;
-    --body-line-height: 1.8; /* Increased line height for readability */
 }
 
 html, body {
@@ -13,8 +13,6 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: var(--body-text-size);
-    line-height: var(--body-line-height);
     color: var(--text-color);
     background-color: var(--background-color);
     background-image: url('/assets/images/space.jpg');
@@ -26,6 +24,11 @@ html, body {
     transition: background-color 0.5s ease;
 }
 
+/* Hide blinkies */
+.hide-blinkies .blinkie {
+    display: none;
+}
+
 main {
     flex: 1;
     display: flex;
@@ -35,8 +38,8 @@ main {
 }
 
 .container, .project-wrapper {
-    max-width: 1000px;
-    width: 100%;
+    max-width: 1000px; /* Set a max width for large screens */
+    width: 100%; /* Full width for smaller screens */
     margin: 20px auto;
     padding: 40px;
     border: 5px solid var(--primary-color);
@@ -44,66 +47,12 @@ main {
     background-color: var(--primary-color);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Include padding and border in total width/height */
 }
 
-/* Markdown Headers */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Orbitron', sans-serif;
-    color: var(--header-color);
-    text-align: center;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-}
-
-h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-}
-
-h2 {
-    font-size: 2em;
-    font-weight: bold;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-h3 {
-    font-size: 1.75em;
-    font-weight: bold;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-}
-
-h4 {
-    font-size: 1.5em;
-    font-weight: bold;
-    text-shadow: 0 1px 1.5px rgba(0, 0, 0, 0.3);
-}
-
-h5 {
-    font-size: 1.25em;
-    font-weight: bold;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-h6 {
-    font-size: 1em;
-    font-weight: bold;
-    text-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.1);
-}
-
-/* Body Text */
-p, ul, ol, blockquote {
-    font-size: var(--body-text-size);
-    line-height: var(--body-line-height);
-    margin: 1.5em 0;
-    text-align: justify;
-}
-
-/* Footer and Header remain the same */
 header {
     background-color: var(--primary-color);
-    padding: 10px;
+    padding: 10px; /* Reduce padding for a smaller header */
     position: fixed;
     top: 0;
     width: 100%;
@@ -112,51 +61,265 @@ header {
     font-family: 'Orbitron', sans-serif;
     font-size: 18px;
     display: flex;
-    align-items: center;
+    align-items: center; /* Center align items vertically */
+}
+
+header nav {
+    margin-left: auto; /* Aligns navigation to the right */
+}
+
+header nav ul {
+    display: flex; 
+    align-items: center; 
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+header nav ul li {
+    margin-right: 20px; /* Space between items */
 }
 
 footer {
     background-color: var(--primary-color);
-    padding: 20px;
+    padding: 20px; /* Increased padding for uniformity */
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     font-family: 'Orbitron', sans-serif;
     font-size: 18px;
 }
 
-/* Mobile Responsiveness */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.header-name {
+    margin-left: 20px;
+    font-size: 24px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Aligns titles and links */
+}
+
+.contact-titles {
+    flex: 1;
+}
+
+.contact-links {
+    flex: 1;
+}
+
+.hamburger {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    font-size: 30px; /* Increase size for better visibility */
+    margin-left: auto; /* Align hamburger to the right */
+    margin-right: 20px; /* Space from the right */
+}
+
+/* Adjust the nav-menu styles */
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+        position: absolute; /* Positioning */
+        top: 10px; /* Adjust to be closer to the top */
+        right: 20px; /* Ensure it's visible on the right */
+        z-index: 1001; /* Above other elements */
+    }
+    .nav-menu {
+        display: none; /* Hide menu on mobile */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; /* Positioning for dropdown */
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        right: 0; /* Full width */
+        background-color: var(--primary-color); /* Match with header */
+        padding: 10px 0; /* Add padding for better touch targets */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Shadow for visibility */
+    }
+    .nav-menu.open {
+        display: flex; /* Show menu when open */
+    }
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid var(--accent-color);
+    border-radius: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover, a:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.btn {
+    background-color: var(--accent-color); 
+    color: var(--text-color);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 16px; 
+    display: inline-block; 
+}
+
+.btn:hover, .btn:focus {
+    background-color: #8f68a3; 
+    transform: scale(1.05); 
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 20px; /* Space between items */
+}
+
+.inline-link {
+    color: var(--accent-color); /* Use your site's accent color */
+    text-decoration: underline; /* Underline to indicate it's a link */
+    font-weight: normal; /* Normal weight to match surrounding text */
+    padding: 0; /* No padding */
+    border: none; /* No border */
+    background: none; /* No background */
+}
+
+.inline-link:hover,
+.inline-link:focus {
+    color: #6a0dad; /* Darker shade on hover */
+    text-decoration: none; /* Optionally remove underline on hover */
+}
+
+.about-image {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px 0; /* Add vertical spacing */
+    display: block; /* Center alignment */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-date {
+    font-size: 0.9em; /* Smaller font size */
+    color: #666; /* Gray color for the date */
+    margin: 5px 0; /* Margin for spacing */
+}
+
+.project-item {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f8f8; /* Optional styling */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-item h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.project-item p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.project-details img {
+    width: auto;
+    max-height: 300px;
+    border-radius: 5px;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-date {
+    font-size: 14px; /* Adjust font size as needed */
+    color: var(--accent-color); /* Use your accent color */
+    text-align: center; /* Center the date under the title */
+    margin: 5px 0; /* Add some margin for spacing */
+}
+
+.project-details img:hover, .project-details img:focus {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.blinkie {
+    width: 300px;
+    height: 40px; 
+    background-color: var(--accent-color); 
+}
+
+.styled-image {
+    max-width: 50%;   /* Control the max width as a percentage */
+    height: auto;     /* Maintain aspect ratio */
+    display: block;   /* Center images horizontally */
+    margin: 20px auto; /* Add space above and below */
+    border-radius: 10px; /* Optional styling for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for a 3D effect */
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+@media (max-width: 1024px) {
+    .container, .project-wrapper {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .project-item {
+        width: calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+}
+
 @media (max-width: 768px) {
     header, footer {
         padding: 10px;
-        font-size: 16px;
+        font-size: 16px; /* Reduce font size for smaller screens */
     }
 
-    .container, .project-wrapper {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.75em;
-    }
-
-    h3 {
-        font-size: 1.5em;
-    }
-
-    h4 {
-        font-size: 1.25em;
-    }
-
-    h5, h6 {
-        font-size: 1em;
-    }
-
-    p, ul, ol, blockquote {
-        font-size: 16px;
-        line-height: 1.6;
+    .project-item {
+        width: calc(100% - 20px); /* One item per row on very small screens */
     }
 }
