@@ -37,6 +37,10 @@ main {
     padding-top: 100px;
 }
 
+p {
+    font-size: 18px; /* trying to make essays readable */
+}
+
 .container, .project-wrapper {
     max-width: 1000px; /* Set a max width for large screens */
     width: 100%; /* Full width for smaller screens */
@@ -106,6 +110,7 @@ footer {
     display: flex;
     justify-content: space-between; /* Aligns titles and links */
 }
+
 
 .contact-titles {
     flex: 1;
@@ -203,21 +208,6 @@ a:hover, a:focus {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three columns */
     gap: 20px; /* Space between items */
-}
-
-.inline-link {
-    color: var(--accent-color); /* Use your site's accent color */
-    text-decoration: underline; /* Underline to indicate it's a link */
-    font-weight: normal; /* Normal weight to match surrounding text */
-    padding: 0; /* No padding */
-    border: none; /* No border */
-    background: none; /* No background */
-}
-
-.inline-link:hover,
-.inline-link:focus {
-    color: #6a0dad; /* Darker shade on hover */
-    text-decoration: none; /* Optionally remove underline on hover */
 }
 
 .about-image {
