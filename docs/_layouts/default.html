@@ -40,14 +40,24 @@
             {% for project in sorted_projects %}
             <div class="project-item">
                 <a href="{{ project.url | relative_url }}">
+<<<<<<< HEAD
+                    <img 
+                        src="{{ project.image | default: '/assets/images/default-project.jpg' | relative_url }}" 
+                        alt="{{ project.title }}">
+=======
                     <img src="{{ project.image }}" alt="{{ project.title }}">
+>>>>>>> d4dcfdb071cf9cacfc7a6fcbe6f6f3b3ca043aef
                     <h3>{{ project.title }}</h3>
                 </a>
                 <p class="project-date">{{ project.date | date: "%B %d, %Y" }}</p> <!-- Displaying the date -->
                 <p>{{ project.short_description }}</p>
             </div>
             {% endfor %}
+<<<<<<< HEAD
+        </div>                
+=======
         </div>
+>>>>>>> d4dcfdb071cf9cacfc7a6fcbe6f6f3b3ca043aef
         {% else %}
         <div class="container">
             {{ content }}
